@@ -13,7 +13,7 @@ func (h *MainHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	data := MainDto{
 		Greeting: "Hello World2!",
 		Sample: SampleDto{
-			data: "test",
+			Content: "test",
 		},
 	}
 	h.tmpl.Execute(w, data)
@@ -31,5 +31,5 @@ type MainDto struct {
 }
 
 type SampleDto struct {
-	data string
+	Content string
 }
