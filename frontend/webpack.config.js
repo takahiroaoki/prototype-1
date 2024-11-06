@@ -23,13 +23,13 @@ module.exports = {
                 filename: 'static/css/[name].[contenthash:8].css',
             },
         }),
-    ],/*
+    ],
     resolve: {
-        extensions: ['.ts', '.pug', '.scss'],
+        extensions: ['.pug', '.scss'],
         alias: {
             '@src': srcDir,
         }
-    },*/
+    },
     module: {
         rules: [
             {
