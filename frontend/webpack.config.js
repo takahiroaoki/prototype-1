@@ -9,7 +9,7 @@ const buildDir = path.resolve(baseDir, 'build')
 module.exports = {
     context: srcDir,
     output: {
-        publicPath: '/prototype-1',
+        publicPath: '/',
         path: buildDir,
     },
     plugins: [
