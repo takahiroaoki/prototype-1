@@ -1,9 +1,9 @@
 {
-  "name": "prototype-1",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "terraform",
-  "workspaceFolder": "/mnt/tf-container",
-  "customizations": {
+	"name": "prototype-1",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/mnt/workspace",
+	"customizations": {
 		"vscode": {
 			"extensions": [
 				"ms-azuretools.vscode-docker",
