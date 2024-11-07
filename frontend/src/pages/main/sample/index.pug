@@ -1,9 +1,10 @@
 //-
     args:
-        data: string goから渡されてくる構造体のfield名
-            {
-                Content: string
-            }
+        field: string goから渡されてくる構造体のfield名。".${fieldName}"の形式。
+            想定する構造は以下
+                {
+                    Content: string
+                }
 
-mixin sample(data)
-    p(class="sample")="{{ " + data + ".Content }}"
+mixin sample(field)
+    p(class="sample")="{{ " + field + ".Content }}"
