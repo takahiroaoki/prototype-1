@@ -1,5 +1,5 @@
 init:
-	cd frontend && npm ci
+	cd frontend && sudo chmod -R 777 node_modules && npm ci
 	cd backend && go mod tidy
 
 build-front:
