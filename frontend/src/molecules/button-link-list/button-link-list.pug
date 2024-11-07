@@ -1,0 +1,16 @@
+include @src/atoms/button-link/button-link.pug
+
+//-
+    args: 
+        field: string goから渡される構造体のフィールド名。構造体の形は以下。
+        {
+            URL: string
+            Disp: string
+        }[]
+
+mixin button-link-list(field)
+    ul.button-link-list
+        =`{{ range ${field} }}`
+        li
+            +button-link("")
+        ="{{ end }}"

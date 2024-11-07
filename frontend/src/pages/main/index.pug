@@ -1,12 +1,14 @@
 extend @src/layouts/common/index.pug
-include ./sample/index.pug
+include @src/molecules/button-link-list/button-link-list.pug
 
 block head
     link(rel='stylesheet', href=require('./index.scss'))
 
 block body
-    h1="{{ .Greeting }}"
-    +sample(".Sample")
+    div.page
+        p.title="以下から選択してください"
+        div.link-list-wrapper
+            +button-link-list(".LinkList")
 
 block script
     //- script(src=require('./index.ts'))
