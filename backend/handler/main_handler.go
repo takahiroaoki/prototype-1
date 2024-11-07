@@ -10,13 +10,19 @@ type MainHandler struct {
 }
 
 func (h *MainHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	data := MainDto{
-		Greeting: "Hello World2!",
-		Sample: SampleDto{
-			Content: "test",
+	pageDto := MainPageDto{
+		LinkList: []Link{
+			{
+				URL:  "/",
+				Disp: "choise A",
+			},
+			{
+				URL:  "/",
+				Disp: "choise B",
+			},
 		},
 	}
-	h.tmpl.Execute(w, data)
+	h.tmpl.Execute(w, pageDto)
 }
 
 func NewMainHandler() http.Handler {
@@ -25,11 +31,11 @@ func NewMainHandler() http.Handler {
 	}
 }
 
-type MainDto struct {
-	Greeting string
-	Sample   SampleDto
+type MainPageDto struct {
+	LinkList []Link
 }
 
-type SampleDto struct {
-	Content string
+type Link struct {
+	URL  string
+	Disp string
 }

@@ -1,5 +1,14 @@
-@use './sample/index.scss';
+@use "@src/molecules/button-link-list/button-link-list.scss";
 
-h1 {
-    color: red;
+.page {
+    padding: 20px 10px 0px;
+
+    & .title {
+        font-size: 16px;
+    }
+
+    & .link-list-wrapper {
+        margin-top: 20px;
+        padding: 10px;
+    }
 }

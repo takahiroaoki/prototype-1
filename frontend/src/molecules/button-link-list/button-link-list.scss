@@ -1,0 +1,7 @@
+@use "@src/atoms/button-link/button-link.scss";
+
+.button-link-list {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}

@@ -1,0 +1,11 @@
+//-
+    args: 
+        field: string goから渡される構造体のフィールド名。構造体の形は以下。
+        {
+            URL: string
+            Disp: string
+        }
+
+mixin button-link(field)
+    div.button-link
+        a.button-link__anker(type="buton", href=`{{ ${field}.URL }}`)=`{{ ${field}.Disp }}`
