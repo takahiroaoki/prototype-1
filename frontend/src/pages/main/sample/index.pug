@@ -1,0 +1,9 @@
+//-
+    args:
+        data: string goから渡されてくる構造体のfield名
+            {
+                Content: string
+            }
+
+mixin sample(data)
+    p(class="sample")="{{ " + data + ".Content }}"

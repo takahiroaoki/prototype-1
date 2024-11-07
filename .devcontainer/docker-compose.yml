@@ -7,7 +7,11 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/mnt/workspace
+      - node_modules:/mnt/workspace/frontend/node_modules
     working_dir: /mnt/workspace
     ports:
       - 8080:8080
     tty: true
+
+volumes:
+  node_modules:

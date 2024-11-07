@@ -1,0 +1,12 @@
+extend @src/layouts/common/index.pug
+include ./sample/index.pug
+
+block head
+    link(rel='stylesheet', href=require('./index.scss'))
+
+block body
+    h1="{{ .Greeting }}"
+    +sample(".Sample")
+
+block script
+    //- script(src=require('./index.ts'))
