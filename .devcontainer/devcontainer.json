@@ -9,7 +9,9 @@
 				"ms-azuretools.vscode-docker",
 				"yzhang.markdown-all-in-one",
 				"ms-vscode.remote-explorer",
-				"golang.Go"
+				"golang.Go",
+				"mrmlnc.vscode-scss",
+				"sibiraj-s.vscode-scss-formatter"
 			]
 		}
 	}
