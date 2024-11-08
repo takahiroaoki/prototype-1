@@ -2,6 +2,22 @@
 
 .button-link-list {
     display: flex;
-    justify-content: left;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+
+    &__button-wrapper {
+        &--small {
+            width: 48px;
+            height: 32px;
+        }
+        &--medium {
+            width: 64px;
+            height: 48px;
+        }
+        &--large {
+            width: 96px;
+            height: 64px;
+        }
+    }
 }

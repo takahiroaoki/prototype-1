@@ -3,14 +3,19 @@ include @src/atoms/button-link/button-link.pug
 //-
     args: 
         field: string goから渡される構造体のフィールド名。構造体の形は以下。
-        {
-            URL: string
-            Disp: string
-        }[]
+            {
+                URL: string
+                ID: string
+            }[]
+    attributes:
+        buttonSize: large|medium|small ボタンのサイズを指定する
 
 mixin button-link-list(field)
+    - const { buttonSize = "medium" } = attributes
+
     ul.button-link-list
         =`{{ range ${field} }}`
         li
-            +button-link("")
+            div(class=`button-link-list__button-wrapper--${buttonSize}`)
+                +button-link("")
         ="{{ end }}"
