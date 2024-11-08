@@ -13,12 +13,12 @@ func (h *MainHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	pageDto := MainPageDto{
 		LinkList: []Link{
 			{
-				URL:  "/",
-				Disp: "choise A",
+				URL: "/",
+				ID:  "choiceA",
 			},
 			{
-				URL:  "/",
-				Disp: "choise B",
+				URL: "/",
+				ID:  "choiceB",
 			},
 		},
 	}
@@ -36,6 +36,6 @@ type MainPageDto struct {
 }
 
 type Link struct {
-	URL  string
-	Disp string
+	URL string
+	ID  string
 }

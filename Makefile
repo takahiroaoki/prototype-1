@@ -6,7 +6,7 @@ build-front:
 	cd frontend && npm run build
 	mkdir -p backend/resources
 	rm -rf backend/resources/*
-	cp -r frontend/build/* -t backend/resources
+	cp -r frontend/build/* backend/resources
 
 build-back:
 	cd backend && CGO_ENABMED=0 GOOS=linux GOARCH=amd64 go build -o prototype-1
