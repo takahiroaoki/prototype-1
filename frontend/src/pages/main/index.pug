@@ -5,10 +5,10 @@ block head
     link(rel='stylesheet', href=require('./index.scss'))
 
 block body
-    div.page
+    div.page(data-ref="index")
         p.title="以下から選択してください"
         div.link-list-wrapper
-            +button-link-list(".LinkList")(buttonSize="large")
+            +button-link-list("sample-link-list", ".LinkList")(buttonSize="large")
 
 block script
     //- script(src=require('./index.ts'))

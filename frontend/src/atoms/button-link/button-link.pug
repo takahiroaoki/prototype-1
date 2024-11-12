@@ -1,11 +1,12 @@
 //-
     args: 
+        ref: string コンポーネントを参照するkey
         field: string goから渡される構造体のフィールド名。構造体の形は以下。
-        {
-            URL: string
-            ID: string
-        }
+            {
+                URL: string
+                ID: string
+            }
 
-mixin button-link(field)
-    div.button-link
+mixin button-link(ref, field)
+    div.button-link(data-ref=`${ref}`)
         a.button-link__anker(type="buton", class=`button-link__anker--{{ ${field}.ID }}`, href=`{{ ${field}.URL }}`)
