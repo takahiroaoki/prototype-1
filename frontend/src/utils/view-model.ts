@@ -1,3 +1,4 @@
+// TODO: TypeScriptを使う場合はWebpackでts-loaderの設定とimportのaliasの設定追加
 export class ViewModel {
     protected elem: HTMLElement
     protected ref: string
